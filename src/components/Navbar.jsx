@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom"
 
 export default function Navbar() {
     return <nav>
-            <a to="/" className="navbar-title">Fit <span>Tracker</span></a>
+            <a href="/" className="navbar-title">Fit <span>Tracker</span></a>
             <ul>
                 <li>
                     <NavLink to="/" className={({ isActive }) => "nav-link" + (isActive ? " active" : "") }>Home</NavLink>

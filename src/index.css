@@ -1,22 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Lexend:wght@100..900&display=swap');
 
+:root {
+  --background: #181818;
+  --secondary-blue: #81c6ff;
+}
 * {
   box-sizing: border-box;
 }
 
-body {
+html, body, #root {
   margin: 0;
   padding: 0;
+  height: 100%;
+}
+
+body {
+  background-color: var(--background);
 }
 
 nav {
   width: 100%;
-  background-color: #686868;
+  background-color: var(--background);
   color: white;
   display: flex;
   justify-content: space-between;
   padding: 0 1rem;
   align-items: stretch;
+  border-bottom: 2px solid white;
 }
 
 a {
@@ -50,8 +60,11 @@ nav li {
 .nav-link:hover {
   background-color: #464646;
 }
-.active {
-  background-color: #81c6ff;
+.nav-link.active {
+  background-color: var(--secondary-blue);
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .nav-link {
@@ -66,5 +79,5 @@ nav li {
 }
 
 .navbar-title span {
-  color: #81c6ff;
+  color: var(--secondary-blue);
 }
